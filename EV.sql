@@ -1,0 +1,7 @@
+CREATE TABLE "vehicle" (
+	"VIN"	TEXT NOT NULL,
+	"Model_year"	INTEGER,
+	"Model"	TEXT NOT NULL,
+	"Make"	TEXT NOT NULL,
+	PRIMARY KEY("VIN")
+);

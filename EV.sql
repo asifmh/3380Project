@@ -52,5 +52,21 @@ CREATE TABLE "District"(
     "Ld" INTEGER,
     PRIMARY KEY(DOL_ID, longitude, latitude)
     );
+CREATE TABLE EVData
+(
+	"VIN"	TEXT,
+	"Model"	TEXT,
+	"DOL_ID"	INTEGER,
+	"longitude" DECIMAL(10, 6),
+   	"latitude" DECIMAL(10, 6),
+	"census"  TEXT ,
+	FOREIGN KEY("VIN") REFERENCES "vehicle"("VIN")
+	FOREIGN KEY("DOL_ID") REFERENCES "District"("DOL_ID"),
+	FOREIGN KEY("longitude") REFERENCES "location"("longitude"),
+	FOREIGN KEY("latitude") REFERENCES "location"("latitude"),
+	PRIMARY KEY("VIN" , "DOL_ID" , "longitude" , "latitude" , " census")
+	
+	
+);
 
 
